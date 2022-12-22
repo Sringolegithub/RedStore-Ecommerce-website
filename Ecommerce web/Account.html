@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppingcart | Redstore</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" width="125px">
+                </a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="Shoppingcart.html"><img src="images/shoppingcart.jpg" height="30px" width="30px"></a>
+            <i class="fa fa-bars menuicon" onclick="menutoggle()"></i>
+        </div>
+    </div>
+    <!-- ---------account page-------- -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/bg5.jpg" width="90%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <br>
+                            <a href="">Forgot password</a>
+                        </form>
+
+
+                        <form id="RegistrationForm">
+                            <input type="text" placeholder="username">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Register</button>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ----------footer------------------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App ForAndroid And ios Mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="images/Google_Play.jpg">
+                        <img src="images/apple-app-store-logo.jpg">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo.jpg" width="200px">
+                    <p>our Purpose Is to Sustainably Make the Pleasure And<br>
+                        Benefits of Sports Accessible to the many </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Afiliate</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>You-Tube</li>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright <i class="fa fa-copyright"></i>
+                Sakshi.Made With<i class="fa fa-heart"></i> by practice</p>
+        </div>
+    </div>
+
+    <!-- -------------java script------------ -->
+    <script>
+        var menuitems = document.getElementById("menuItems");
+
+        menuitems.style.maxHeight = "0px";
+
+        function menutoggle() {
+
+            if (menuitems.style.maxHeight == "0px") {
+                menuitems.style.maxHeight = "200px";
+            }
+            else {
+                menuitems.style.maxHeight = "0px";
+            }
+
+        }
+    </script>
+    <!-- ------------------js for toggle form----------------- -->
+    <script>
+
+        var loginform = document.getElementById("LoginForm");
+        var regform = document.getElementById("RegistrationForm");
+        var indicat = document.getElementById("indicator");
+
+        function register() {
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicat.style.transform = "translateX(100px)"
+
+        }
+        function login() {
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicat.style.transform = "translateX(0px)"
+
+
+        }
+
+    </script>
+</body>
+
+</html>
